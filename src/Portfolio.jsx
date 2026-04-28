@@ -377,6 +377,7 @@ export default function Portfolio() {
         <div className="footer-logo">VALDO.FILMS</div>
         <div className="footer-text">© 2026 · Todos los derechos reservados</div>
         <div className="footer-social">
+          <a >Desarrollado por:</a>
           <a href="https://www.instagram.com/balsoft.dev/">Balsoft.dev</a>
         </div>
       </footer>
