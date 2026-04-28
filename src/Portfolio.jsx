@@ -4,7 +4,7 @@ import valdoban2 from './assets/valdobanner2.jpg';
 import sanchezr  from './assets/sanchezrosa.jpg';
 
 // ─── CONFIGURACIÓN DRIVE ─────────────────────────────────────────────────────
-const API_KEY     = "AIzaSyBM56Vbg5B2ChHKFlF55ddoVxP4QljBjZk";
+const API_KEY     = import.meta.env.VITE_GOOGLE_VALDO_FILMS;
 const ROOT_FOLDER = "1k7b5nkfN1b4o8E_FE9CbTvU-_2k582Oh";
 const DRIVE_URL   = "https://www.googleapis.com/drive/v3/files";
 
