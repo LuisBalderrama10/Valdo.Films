@@ -189,7 +189,7 @@ export default function Portfolio() {
 
       {/* ── HERO ── */}
       <section className="hero">
-        <img className="hero-img" src={valdoban2} alt="Valdo Films portada" />
+        <img className="hero-img" src={valdoban2} loading="eager" alt="Valdo Films portada" />
         <div className="hero-tint" />
         <span className="hero-location">Ciudad Obregón · Sonora · MX</span>
         <div className="hero-content">
