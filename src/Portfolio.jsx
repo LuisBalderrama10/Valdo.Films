@@ -140,7 +140,7 @@ const categorias = [
 
 // ─── SERVICIOS ───────────────────────────────────────────────────────────────
 const servicios = [
-  { nombre: "Fotografia",                desc: "Capturamos la intensidad y emoción de cada obra escénica con discreción y precisión artística." },
+  { nombre: "Fotografia",                desc: "Fotografía enfocada en emoción, detalle y narrativa visual, con un enfoque limpio y artístico." },
   { nombre: "Video", desc: "Video con estilo cinematográfico, abarcando cualquier tipo de evento social o empresarial." },
   { nombre: "Edicion",          desc: "Edicion profesional de videos para eventos y proyectos. Videos para cualquier tipo de formato" },
 ];
@@ -210,12 +210,12 @@ export default function Portfolio() {
       </section>
 
       {/* ── SOBRE ── */}
-      <section className="sobre" id="sobre">
+      <div className="sobre-content" id="sobre">
         <div className="sobre-img-wrap">
           <img className="sobre-img" src={sanchezr} alt="Equipo Valdo Films" />
         </div>
         <div className="sobre-texto">
-          <p className="label">Sobre Nosotros</p>
+          <p className="sobre-label">Sobre Nosotros</p>
           <h2 className="sobre-titulo">
             Cada momento<br />merece ser <em>eterno</em>
           </h2>
@@ -240,7 +240,7 @@ export default function Portfolio() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* ── PORTAFOLIO ── */}
       <section className="portafolio" id="portafolio">
@@ -345,13 +345,13 @@ export default function Portfolio() {
       {/* ── CONTACTO ── */}
       <section className="contacto" id="contacto">
         <div className="contacto-left">
-          <p className="label">Hablemos</p>
+          <p className="contacto-label">Hablemos</p>
           <h2 className="contacto-titulo">
             ¿Tienes un<br /><span className="red">proyecto?</span>
           </h2>
           <p className="contacto-sub">Cuéntanos tu idea y lo hacemos realidad.</p>
           <div className="contacto-btns">
-            <a className="btn-ghost" href="https://wa.me/526442549332?text=Hola%20Luis,%20me%20interesa%20contratar%20tus%20servicios" target="_blank">WhatsApp </a>
+            <a className="btn-ghost" href="https://wa.me/526442549332?text=Hola%20ValdoFilms,%20me%20interesa%20mas%20información%20sobre%20tus%20servicios" target="_blank">WhatsApp </a>
               <a className="btn-ghost" href="https://mail.google.com/mail/?view=cm&to=Oswaldomeva95@gmail.com&su=Solicitud%20de%20servicio%20fotográfico&body=Hola%20Luis,%20me%20interesa%20tu%20trabajo" target="_blank" rel="noreferrer">Enviar correo
               </a>
           </div>
@@ -363,7 +363,7 @@ export default function Portfolio() {
           </div>
           <div className="contacto-dato">
             <div className="contacto-dato-label">WhatsApp</div>
-            <div className="contacto-dato-val">644 123 4567</div>
+            <a className="contacto-dato-val" href="https://wa.me/526442549332?text=Hola%20ValdoFilms,%20me%20interesa%20mas%20información%20sobre%20tus%20servicios" target="_blank" rel="noreferrer">6442549332</a>
           </div>
           <div className="contacto-dato" target="_blank">
             <div className="contacto-dato-label">Instagram</div>

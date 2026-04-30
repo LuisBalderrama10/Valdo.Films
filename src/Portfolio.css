@@ -227,7 +227,7 @@ body {
 }
 
 /* ─── SOBRE ─── */
-.sobre {
+.sobre-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   border-top: 1px solid var(--border);
@@ -246,6 +246,7 @@ body {
   display: block;
   filter: grayscale(30%);
   transition: filter 0.6s, transform 0.6s;
+
 }
 
 .sobre-img-wrap:hover .sobre-img {
@@ -274,9 +275,9 @@ body {
   border-left: 1px solid var(--border);
 }
 
-.label {
+.sobre-label {
   font-family: var(--font-ui);
-  font-size: 10px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -381,21 +382,21 @@ body {
 .filtro-btn {
   font-family: var(--font-ui);
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   padding: 15px 100px;
   border-radius: 100px;
-  border: 1px solid var(--border);
+  border: 2px solid black;
   background: transparent;
-  color: var(--ink-mid);
+  color: black;
   cursor: crosshair;
   transition: all 0.2s;
 }
 
 .filtro-btn:hover {
-  border-color: var(--blue);
-  color: var(--blue);
+  border-color: red;
+  color: red;
 }
 
 .filtro-btn.active {
@@ -403,6 +404,7 @@ body {
   border-color: var(--ink);
   color: var(--white);
 }
+
 
 /* Grid — 4 columnas en desktop */
 .grid {
@@ -487,7 +489,8 @@ body {
   border-bottom-color: #1e1e1e; 
   justify-content: center;
 }
-.servicios .label             { 
+.servicios .label {
+  font-family: var(--font-ui); 
   color: red;
   font-size: 20px;
   display: flex;
@@ -557,7 +560,29 @@ body {
   flex-wrap: wrap;
 }
 
-.contacto .label {
+.contacto-right{
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 12px;
+}
+
+
+.contacto-dato{
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 24px;
+}
+
+.contacto-label {
+  font-family: var(--font-ui);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 16px;
+    font-weight: 700;
   color: Black;
   font-size: 20px;
 }
@@ -768,6 +793,8 @@ body {
   .sobre { grid-template-columns: 1fr 1fr; }
   .contacto-right { width: 100%; flex-direction: row; flex-wrap: wrap; }
   .contacto-dato  { flex: 1; min-width: 140px; }
+  .hero-content { padding: 0 20px; text-align: center; }
+  
 }
 
 @media (max-width: 768px) {
@@ -775,9 +802,38 @@ body {
   .nav-links { display: none; }
   .hero-location { display: none; }
   .hero-title { letter-spacing: -1px; }
-  .sobre { grid-template-columns: 1fr; }
-  .sobre-img-wrap { min-height: 280px; }
-  .sobre-texto { border-left: none; border-top: 1px solid var(--border); }
+    
+  .sobre-texto {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: 90%;
+    background-color: #f7f3f380;
+    text-align: center;
+    z-index: 2; 
+  }
+
+  .sobre-label { color: var(--white); }
+
+  .sobre-desc { color: var(--white); }
+
+  .stat-label { color: var(--white); }
+
+  .sobre-content::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+     to top,
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.2)
+    );
+    z-index: 1;
+  }
+  
   .section-header { flex-direction: column; align-items: flex-start; }
   .grid { columns: 2; }
   .grid-item img { max-height: 200px; }
@@ -787,6 +843,13 @@ body {
   .contacto-right { width: 100%; }
   .filtros-wrap { align-items: flex-start; }
   .filtros.sub { justify-content: flex-start; }
+  .hero-content { padding: 0 18px; text-align: center; }
+
+    .contacto-datos {
+    flex-direction: column;
+  }
+
+    .contacto-dato { width: 100%; box-sizing: border-box; }
 }
 
 @media (max-width: 480px) {
@@ -797,6 +860,10 @@ body {
   .btn-primary, .btn-ghost { text-align: center; }
   .footer { justify-content: center; text-align: center; }
   .footer-social { justify-content: center; }
+  .hero-content { padding: 0 15px; text-align: center; }
+    .contacto-right {
+    grid-template-columns: 1fr;
+    }
 }
 
    SUBCATEGORÍAS + LOADING + ESTADOS
@@ -818,14 +885,14 @@ body {
 }
 
 .sub-btn {
-  font-size: 9px !important;
-  padding: 5px 14px !important;
+  font-size: 13px !important;
+  padding: 10px 20px !important;
   color: var(--ink-soft) !important;
 }
 
 .sub-btn.active {
-  background: var(--blue) !important;
-  border-color: var(--blue) !important;
+  background: red !important;
+  border-color: black !important;
   color: var(--white) !important;
 }
 
@@ -862,7 +929,10 @@ body {
   color: var(--ink-soft);
 }
 
-.grid-error { color: var(--red) !important; }
+.grid-error { 
+  color: var(--red) !important;
+  font-size: 13px !important;
+}
 
 .spinner {
   width: 32px;
