@@ -397,6 +397,7 @@ body {
 .filtro-btn:hover {
   border-color: red;
   color: red;
+
 }
 
 .filtro-btn.active {
@@ -904,13 +905,13 @@ body {
 .sub-btn {
   font-size: 13px !important;
   padding: 10px 20px !important;
-  color: var(--ink-soft) !important;
+  color: black !important;
 }
 
 .sub-btn.active {
-  background: red !important;
+  background: black !important;
   border-color: black !important;
-  color: var(--white) !important;
+  color: var(--ink-soft) !important;
 }
 
 .filtro-arrow {
